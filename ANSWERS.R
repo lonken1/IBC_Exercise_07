@@ -19,3 +19,13 @@ oddrows(iris)
 
 
 # PROBLEM NUMBER 2
+
+# Function that returns the number of observations for a specified species
+numberspecies <- function(data,taxa){
+  rows <- data[data$Species==taxa,]
+  numberrows <- nrow(rows)
+  
+  return(numberrows)
+}
+
+numberspecies(iris,"virginica")
