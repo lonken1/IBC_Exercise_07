@@ -45,7 +45,7 @@ certainsepallength <- function(data,width){
 certainsepallength(data=iris,width=3.0)
 
 # Writes the data for a a given species to a csv file with species name as the file
-# 
+# You must provide the dataframe and species
 dataforspecies <- function(data,taxa){
   specificdata <- data[data$Species==taxa,]
   filename <- paste(taxa,".csv")
@@ -54,4 +54,5 @@ dataforspecies <- function(data,taxa){
   return()
 }
 
+# Running dataforspecies on iris with virginica as the species
 dataforspecies(iris,"virginica")
